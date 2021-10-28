@@ -11,6 +11,7 @@ const wind = document.querySelector("#wind");
 //Event: get target city
 formField.addEventListener("submit", (e) => {
   e.preventDefault();
+  if (cityInputField.value === "") return;
   const targetCity = cityInputField.value;
   getWeatherData(targetCity);
   clearField();
